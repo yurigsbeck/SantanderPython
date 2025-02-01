@@ -102,3 +102,13 @@ print(frutas)  #  ["uva", "pera", "maçã"]
 números = [1, 2, 3, 4, 5]
 quadrados = [x ** 2 for x in números if x % 2 == 0]
 print(quadrados)  #  [4, 16], o x irá copiar a lista de numeros, os pares serão selecionaos e elevaddos a 2
+
+#TUPLAS, tuplas são listas soq não podem ser alteradas 
+#count(elemento): devolve o número de vezes que um elemento aparece na tupla. 
+#index(elemento): devolve o índice da primeira aparição de um elemento na tupla. Opcionalmente, pode-se especificar o início e fim da busca. 
+#len(tupla): embora não seja um método de tupla propriamente dito, esta função incorporada devolve o comprimento da tupla
+minha_tupla = (1, 2, 3, 2, 4, 2)
+
+print (minha_tupla.index(2))   # Saída: 1, procure o dois, o primeiro  dois aparece no indice 1
+print (minha_tupla.index(2, 2))   #Saída: 3, (2,2) significa procure o numero 2 a partirt do indice 2
+print (minha_tupla.index(2, 2, 4))   #Saída: 3, (2,2,4) significa procure o numero 2 entre o indice 2 e 4
