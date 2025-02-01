@@ -112,3 +112,44 @@ minha_tupla = (1, 2, 3, 2, 4, 2)
 print (minha_tupla.index(2))   # Saída: 1, procure o dois, o primeiro  dois aparece no indice 1
 print (minha_tupla.index(2, 2))   #Saída: 3, (2,2) significa procure o numero 2 a partirt do indice 2
 print (minha_tupla.index(2, 2, 4))   #Saída: 3, (2,2,4) significa procure o numero 2 entre o indice 2 e 4
+
+#DICIONARIOS
+pessoa = {"nome": "João", "idade": 25, "cidade": "Madri"}
+print(pessoa["nome"])  #  "João"
+print(pessoa["idade"])    #  25
+print(pessoa["cidade"])  #  "Madri"
+
+#metodos de dicionarios
+print(pessoa.keys())    #  dict_keys(["nome", "idade", "cidade"])
+print(pessoa.values())  #  dict_values(["João", 25, "Madri"])
+print(pessoa.items())   #  dict_items([("nome", "João"), ("idade", 25), ("cidade", "Madri")])
+pessoa.update({"profissao": "Engenheiro"})
+print(pessoa)  #  {"nome": "João", "idade": 25, "cidade": "Madri", "profissao": "Engenheiro"}
+
+#CONJUNTOS(SET), Os conjuntos suportam operações matemáticas de conjuntos, como a união (|), a interseção (&, item iguais), a diferença (-,item q a tem e b não possue) e a diferença simétrica (^,item q são diferente).
+conjunto1 = {1, 2, 3}
+conjunto2 = {3, 4, 5}
+uniao = conjunto1 | conjunto2
+print(uniao)  #  {1, 2, 3, 4, 5}
+intersecao = conjunto1 & conjunto2
+print(intersecao)  #  {3}
+diferenca = conjunto1 - conjunto2
+print(diferenca)  #  {1, 2}
+diferenca_simetrica = conjunto1 ^ conjunto2
+print(diferenca_simetrica)  #  {1, 2, 4, 5}
+
+#Métodos de conjuntos
+#add(elemento): adiciona um elemento ao conjunto.
+#remove(elemento): remove um elemento do conjunto. Se o elemento não existir, gera um erro.
+#discard(elemento): remove um elemento do conjunto se estiver presente. Se o elemento não existir, não faz nada.
+#clear(): remove todos os elementos do conjunto.
+
+frutas = {"maçã", "banana", "laranja"}
+frutas.add("pera")
+print(frutas)  #  {"maçã", "banana", "laranja", "pera"}
+frutas.remove("banana")
+print(frutas)  #  {"maçã", "laranja", "pera"}
+frutas.discard("uva")
+print(frutas)  #  {"maçã", "laranja", "pera"}
+frutas.clear()
+print(frutas)  #  set()
